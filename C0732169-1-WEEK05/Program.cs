@@ -36,6 +36,8 @@ namespace C0732169_1_WEEK05
             FirstFloor.elevatorup = SecondFloor;
             SecondFloor.floorNumber = "Second Floor";
 
+            Console.WriteLine("floor Number is {0}", SecondFloor.floorNumber);
+
         }
     }
 }
