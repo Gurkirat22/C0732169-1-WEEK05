@@ -25,9 +25,23 @@ namespace C0732169_1_WEEK05
     }
     class Department
     {
+        public Department(string dept_name)
+        {
+            DepartmentDescription = dept_name
+        }
         public Department aDepartment;
+        string DepartmentDescription;
     }
-   
+    
+    class DepartmentStore
+    {
+        public void InitializeDeparments()
+        {
+            Department kitchenware = new Department("Kitchenware");
+            Department Books = new Department("Books");
+        }
+    }
+
     class Elevator
     {
         Node Head;
