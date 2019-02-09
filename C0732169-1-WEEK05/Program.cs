@@ -10,7 +10,9 @@ namespace C0732169_1_WEEK05
     {
         static void Main(string[] args)
         {
-
+            Elevator e = new Elevator();
+            e.setup();
+            e.TraverseList();
         }
     }
     class Node
@@ -19,21 +21,28 @@ namespace C0732169_1_WEEK05
         public Node floor;
         public Node elevatorup;
         public string floorNumber;
-        
+
     }
+    class Department
+    {
+        public Department aDepartment;
+    }
+   
     class Elevator
     {
+        Node Head;
         Node FirstFloor;
         Node SecondFloor;
         Node ThirdFloor;
         Node FourthFloor;
 
-        public void run()
+        public void setup()
         {
             FirstFloor = new Node();
             SecondFloor = new Node();
             ThirdFloor = new Node();
             FourthFloor = new Node();
+            Head = FirstFloor;
             FirstFloor.floorNumber = "First Floor";
             Console.WriteLine("Floor number is {0}", FirstFloor.floorNumber);
 
@@ -50,7 +59,17 @@ namespace C0732169_1_WEEK05
             FourthFloor.floorNumber = "FourthFloor";
             Console.WriteLine("floor number is {0}", FourthFloor.floorNumber);
 
+            FourthFloor.elevatorup = null;
+        }
 
+        public void TraverseList()
+        {
+            Node temp;
+            Console.WriteLine("The first floor is " + Head.floorNumber);
+            while (true)
+            {
+
+            }
         }
     }
 }
